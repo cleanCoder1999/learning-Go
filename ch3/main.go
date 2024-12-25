@@ -55,4 +55,24 @@ func main() {
 	rs := []rune(s)
 	fmt.Println(bs)
 	fmt.Println(rs)
+	fmt.Println("")
+
+	// ### using a map as set
+	intSet := map[int]bool{}
+	vals := []int{1, 2, 3, 4, 5, 5, 6, 8, 8, 8, 8, 8, 8, 7, 8, 9, 0, 12, 55}
+
+	// add the values to the map
+	for _, v := range vals {
+		intSet[v] = true
+	}
+
+	fmt.Println("len(vals): ", len(vals))
+	fmt.Println("len(intSet): ", len(intSet))
+
+	fmt.Println(intSet[5])
+	fmt.Println(intSet[500])
+
+	if intSet[55] {
+		fmt.Println("55 is in the set")
+	}
 }
