@@ -47,4 +47,12 @@ func main() {
 	b := make([]int, 4)
 	num := copy(b, a)
 	fmt.Println(b, num)
+	fmt.Println("")
+
+	// ### converting strings to rune and byte slices
+	var s = "Hello, ☀️"
+	bs := []byte(s)
+	rs := []rune(s)
+	fmt.Println(bs)
+	fmt.Println(rs)
 }
