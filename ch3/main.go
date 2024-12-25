@@ -82,5 +82,61 @@ func main() {
 		if intSet[55] {
 			fmt.Println("55 is in the set")
 		}
+		fmt.Println("")
 	}
+
+	// ### exercise 1
+	{
+		greetings := []string{"Hello", "Hola", "Привет", "안녕하세요", "こんにちは"}
+		sub1 := greetings[:2:3]
+		sub2 := greetings[1:4:4]
+		fmt.Println(sub1)
+		fmt.Println(sub2)
+		fmt.Println("")
+	}
+
+	// ### exercise 2 - print the fourth rune of message as a character, not a number
+	{
+		message := "Hi 👩🏻 and 👨🏻"
+		runeMsg := []rune(message)
+
+		fmt.Println(runeMsg)
+		fmt.Println("# of bytes:", len(string(runeMsg[3])))
+		fmt.Println(string(runeMsg[3]))
+		fmt.Printf("%c\n", runeMsg[3])
+		fmt.Println("")
+	}
+
+	// ### exercise 2 - print the fourth rune of message as a character, not a number
+	{
+		type Employee struct {
+			firstName string
+			lastName  string
+			id        int
+		}
+
+		ken := Employee{
+			"Ken",
+			"Thompson",
+			1,
+		}
+
+		dennis := Employee{
+			firstName: "Dennis",
+			lastName:  "Ritchie",
+			id:        2,
+		}
+
+		var rob Employee
+		rob.firstName = "Rob"
+		rob.lastName = "Pike"
+		rob.id = 3
+
+		fmt.Println(ken)
+		fmt.Println(dennis)
+		fmt.Println(rob)
+
+		fmt.Println("")
+	}
+
 }
