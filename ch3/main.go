@@ -39,4 +39,12 @@ func main() {
 	fmt.Println("x:", x)
 	fmt.Println("y:", y)
 	fmt.Println("z:", z)
+	fmt.Println("")
+	fmt.Println("")
+
+	// ### copying slices
+	a := []int{1, 2, 3, 4}
+	b := make([]int, 4)
+	num := copy(b, a)
+	fmt.Println(b, num)
 }
