@@ -9,8 +9,11 @@ func main() {
 	x = append(x, "a", "b", "c", "d")
 	fmt.Println("x:", x)
 
-	y := x[:2]
-	z := x[2:]
+	// full slice expression protects against confusing behavior due to append and memory sharing
+	// s[<beginning (incl)> : <end (excl)> : <last position in the parent slice's capacity>]
+	// sub-slice capacity = last position in the parent slice's capacity - beginning (incl)
+	y := x[:2:2]
+	z := x[2:4:4]
 	fmt.Println(cap(x), cap(y), cap(z))
 	fmt.Println("x:", x)
 	fmt.Println("y:", y)
