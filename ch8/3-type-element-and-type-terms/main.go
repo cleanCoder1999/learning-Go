@@ -43,6 +43,8 @@ func main() {
 // if we want the method to work with other integer types, explicit type conversions would be necessary
 // which in turn might cause problems. For example, uint allows you to represent values that are too big for an int.
 //
+// In short, type terms are used to specify operators (e.g. \ or %).
+//
 // That's why we need a way to specify that you can use / and %.
 // In Go, this can be done with a 'type element' within an interface (e.g. see Integer below).
 //
